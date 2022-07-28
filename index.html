@@ -1,12 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
     <title>Weather Dashboard</title>
 </head>
+
 <body>
-    
+
+    <header class="row">
+        <h1 class="col-12">Weather Dashboard</h1>
+    </header>
+
+<main>
+    <div class="row">
+        <!-- city search -->
+        <div class="col-md-3 col-sm">
+            <h1 class="row">Search for a City:</h1>
+            
+            <!-- input section -->
+            <form class="row" id="citySearch">
+                <input type="search" class="form-control" id="cityInput" placeholder="San Diego">
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Search</button>
+            </form>
+            <!-- previous searches  -->
+            <div class="row" id="previousSearches">
+            </div>
+        </div>
+        <!-- city -->
+        <div class="col-md-9" id="cityContainer">
+            <!-- Today's weather -->
+            <div class="row" style="border:1px solid">
+                <div class="col-12" id="currentContainer">
+                    <div class="row">
+                        <h1>
+                            <span id="cityName">City Name</span>
+                            <span id="currentDate">01/01/2001</span>
+                        </h1>
+
+                    </div>
+                    <p class="row">Temp:<span id="Temp">99.99</span>°F</p>
+                    <p class="row">Wind:<span id="Wind">9.99</span>MPH</p>
+                    <p class="row">Humidity:<span id="Humidity">99</span>%</p>
+                    <p class="row">UV Index:<span id="UV">11.49</span></p>
+                </div>
+            </div>
+            <!-- 5 day forecast -->
+            <div class="row">
+                <div class="col-12" id="5DayContainer">
+                    <h2 class="row">5-Day Forecast:</h2>
+                    <div id="forecastContainer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/script.js"></script>
+</main>
 </body>
+
 </html>

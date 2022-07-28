@@ -1,0 +1,6 @@
+header > h1 {
+    text-align: center;
+    color: white;
+    background: linear-gradient(90deg, rgb(8, 215, 88) 0%, rgb(67, 147, 244) 100%);
+    padding: 15px;
+}
